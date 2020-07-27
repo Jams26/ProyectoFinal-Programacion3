@@ -1,0 +1,54 @@
+﻿@using TiendaOnline.Models
+@model List<Productos>
+@{
+    ViewData["Title"] = "Carrito";
+}
+
+<h1>Tu Carrito</h1>
+
+<br />
+<div class="row">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria del Producto</th>
+                <th>Detalles</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var k in Model){
+                <tr>
+                    <td>
+                        <img src="~/@k.Imagen" width="200px" height="150px" />
+                    </td>
+                    <td>@k.Nombre</td>
+                    <td>@k.Precio</td>
+                    <td>@k.CategoriaProductos.nombreCategoria</td>
+                    <td>@k.Detalles</td>
+                    <td>
+                        <a asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.ID" class="btn btn-danger">
+                            Eliminar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+
+    <div class="col-6">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-success">Volver al Inicio</a>
+    </div>
+    <div class="col-6 text-right">
+        <h3>Precio Total</h3>
+        <h3>Total Facturado : $@Model.Sum(c=>c.Precio)</h3>
+        <a asp-area="Cliente" asp-action="Checkout" asp-controller="Orden" class="btn btn-info">Verificar</a>
+   </div>
+
+</div>

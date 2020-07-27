@@ -1,0 +1,108 @@
+﻿@model TiendaOnline.Models.Productos
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+<br />
+
+<h2 class="text-info"> Detalles del Producto</h2>
+
+<form asp-action="" method="post" enctype="multipart/form-data">
+    <div class="p-4 rounded border row">
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+
+        <div class="col-8">
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Nombre"></label>
+                </div>
+                <div class="col-5">
+                    <input type="hidden" asp-for="ID" />
+                    <input asp-for="Nombre" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Precio"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Precio" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Detalles"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Detalles" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Detalles" class="text-danger"></span>
+            </div>
+
+
+            @*<div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Imagen"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Imagen" readonly="readonly" class="form-control-file" type="file" />
+                </div>
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>*@
+
+
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="CategoriaProductoId"></label>
+                </div>
+                <div class="col-5">
+                    @*<select asp-for="CategoriaProductoId" asp-items="ViewBag.categoriaProductoId" class="form-control"></select>*@
+                     <input asp-for="CategoriaProductoId" readonly="readonly" class="form-control"  />
+                </div>
+                <span asp-validation-for="CategoriaProductoId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Disponibilidad"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Disponibilidad" class="" readonly="readonly" type="checkbox" />
+                </div>
+                <span asp-validation-for="Disponibilidad" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <a type="button" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-success">Editar</a> 
+                <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+            </div>
+
+
+
+
+        </div>
+        <div class="col-4">
+            <img src="~/@Model.Imagen" width="80%" style="border-radius: 1px; border: 2px solid #0094ff" />
+        </div>
+
+
+    </div>
+</form>
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
