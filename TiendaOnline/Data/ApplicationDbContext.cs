@@ -19,5 +19,6 @@ namespace TiendaOnline.Data
         public DbSet<Productos> Productos { get; set; }
         public DbSet<Orden> Orden { get; set; }
         public DbSet<OrdenDetalles> OrdenDetalles { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }
