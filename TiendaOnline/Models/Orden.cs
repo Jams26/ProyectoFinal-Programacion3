@@ -22,7 +22,6 @@ namespace TiendaOnline.Models
         [Display(Name = "Numero de Teléfono")]
         [Required]
         public string  numeroTel { get; set; }
-        [Required]
         public string Estado { get; set; }
         [Required]
         [EmailAddress]

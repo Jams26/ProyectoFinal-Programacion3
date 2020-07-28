@@ -1,0 +1,63 @@
+﻿@model TiendaOnline.Models.Orden
+@{
+    ViewData["Title"] = "Editar Orden";
+}
+
+<br />
+
+<h2 class="text-info"> Editar Categoria de Producto</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="p-4 rounded border">
+        <input type="hidden" asp-for="ID" />
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="numeroOrden"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="numeroOrden" readonly="readonly" class="form-control" />
+            </div>
+            <span asp-validation-for="numeroOrden" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Nombre"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Nombre" readonly="readonly"  class="form-control" />
+            </div>
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Correo"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Correo" readonly="readonly" class="form-control" />
+            </div>
+            <span asp-validation-for="Correo" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Estado"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Estado" class="form-control" />
+            </div>
+            <span asp-validation-for="Estado" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Actualizar" />
+            <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+        </div>
+    </div>
+</form>
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

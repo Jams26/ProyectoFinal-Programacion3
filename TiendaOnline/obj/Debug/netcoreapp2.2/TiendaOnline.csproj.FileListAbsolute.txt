@@ -105,3 +105,6 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Ra
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Delete.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Assign.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\AssignUserRole.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Index.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ButtonEditOrdenPartial.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Edit.cshtml.g.cs

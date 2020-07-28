@@ -61,5 +61,45 @@ namespace TiendaOnline.Areas.Cliente.Controllers
             return conteoFila.ToString("000");
         }
 
+
+        public IActionResult Index()
+        {
+            return View(_db.Orden.ToList());
+        }
+
+        public ActionResult Edit(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var ordenes = _db.Orden.Find(id);
+            if (ordenes == null)
+            {
+                return NotFound();
+            }
+
+            return View(ordenes);
+        }
+
+        //Crear el metodo Post Editar
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Edit(Orden ordenes)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Update(ordenes);
+                await _db.SaveChangesAsync();
+                TempData["editar"] = "La orden se actualizó correctamente!";
+                return RedirectToAction(nameof(Index));
+            }
+            return View(ordenes);
+        }
+
+
     }
 }
