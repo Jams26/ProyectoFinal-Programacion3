@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TiendaOnline.Data;
 using TiendaOnline.Models;
@@ -10,7 +11,7 @@ namespace TiendaOnline.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
-
+    [Authorize]
     public class CategoriaProductosController : Controller
     {
 
@@ -20,7 +21,7 @@ namespace TiendaOnline.Areas.Admin.Controllers
         {
             _db = db;
         }
-
+        [AllowAnonymous]
         public IActionResult Index()
         {
 
@@ -30,7 +31,6 @@ namespace TiendaOnline.Areas.Admin.Controllers
         }
     
         //Metodo Crear
-
         public ActionResult Create()
         {
             return View();

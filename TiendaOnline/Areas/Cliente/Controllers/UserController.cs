@@ -41,6 +41,7 @@ namespace TiendaOnline.Areas.Cliente.Controllers
 
                 if (result.Succeeded)
                 {
+                    var isSaveRole = await _userManager.AddToRoleAsync(user, "User");
                     TempData["guardar"] = "El usuario se creó exitosamente!";
                     return RedirectToAction(nameof(Index));
                 }
@@ -108,6 +109,126 @@ namespace TiendaOnline.Areas.Cliente.Controllers
 
             return View(user);
         }
+
+
+
+        public async Task<IActionResult> BloquearUsuario(string id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BloquearUsuario(ApplicationUser user)
+        {
+
+            var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
+            if (userInfo == null)
+            {
+                return NotFound();
+            }
+
+            userInfo.LockoutEnd = DateTime.Now.AddYears(100);
+            int filaAfectada = _db.SaveChanges();
+
+            if (filaAfectada > 0)
+            {
+                TempData["guardar"] = "El usuario se bloqueó correctamente!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(userInfo);
+        }
+
+
+
+        public async Task<IActionResult> Active(string id)
+        {
+
+            var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Active(ApplicationUser user)
+        {
+
+            var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
+            if (userInfo == null)
+            {
+                return NotFound();
+            }
+
+            userInfo.LockoutEnd = DateTime.Now.AddDays(-1);
+            int filaAfectada = _db.SaveChanges();
+
+            if (filaAfectada > 0)
+            {
+                TempData["guardar"] = "El usuario se activó correctamente!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(userInfo);
+        }
+
+
+
+
+
+
+
+        public async Task<IActionResult> Delete(string id)
+        {
+
+            var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(ApplicationUser user)
+        {
+
+            var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
+            if (userInfo == null)
+            {
+                return NotFound();
+            }
+                _db.ApplicationUsers.Remove(userInfo);
+                int filaAfectada = _db.SaveChanges();
+
+                if (filaAfectada > 0)
+                {
+                TempData["guardar"] = "El usuario se eliminó correctamente!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(userInfo);
+        }
+
 
     }
 }

@@ -96,3 +96,12 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Ra
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\User\Edit.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_PartialView.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\User\Details.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\User\BloquearUsuario.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\User\Active.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\User\Delete.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Index.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Create.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Edit.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Delete.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\Assign.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Role\AssignUserRole.cshtml.g.cs

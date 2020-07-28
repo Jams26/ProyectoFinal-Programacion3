@@ -1,5 +1,4 @@
-﻿@using TiendaOnline.Models;
-@model IEnumerable<ApplicationUser>
+﻿
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,10 +8,10 @@
 
 <div class="row">
     <div class="col-6">
-        <h2 class="text-info">Lista de Usuarios</h2>
+        <h2 class="text-info">Roles</h2>
     </div>
     <div class="col-6 text-right">
-        <a asp-action="Create" class="btn btn-info">Nuevo Usuario</a>
+        <a asp-action="Create" class="btn btn-info">Nuevo Rol</a>
     </div>
 </div>
 
@@ -23,50 +22,31 @@
 
         <tr class="table-info ">
             <th>
-                Fecha de Nacimiento
+                Nombre
             </th>
             <th>
-                Usuario
-            </th>
-            <th>Estado</th>
-            <th>
-                
+
             </th>
             <th class="text-center">
                 Acción
             </th>
         </tr>
 
-        @foreach (var k in Model)
+        @foreach (var k in ViewBag.Roles)
         {
-    <tr>
-        <td>
-            @k.fechaNacimiento
-        </td>
-        <td>
-            @k.UserName
-        </td>
-
-        @if (k.LockoutEnd > DateTime.Now && k.LockoutEnd != null)
-        {
-            <td>Usuario Inactivo</td>
-            <td></td>
-            <td>
-                <div class="btn-group">
-                    <a asp-action="Active" class="btn btn-warning" asp-route-id="@k.Id">Editar</a>
-                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@k.Id">Eliminar</a>
-                </div>
-            </td>
-        }
-        else
-        {
-            <td>Usuario Activo</td>
-            <td>
-                <partial name="_PartialView" model="@k.Id" />
-            </td>
-        }
-
-    </tr>
+            <tr>
+                <td>
+                    @k.Name
+                </td>
+                <td></td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@k.Id">Editar</a>
+                        @*<a asp-action="Details" class="btn btn-info" asp-route-id="@k.Id">Detalles</a>*@
+                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@k.Id">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
         }
 
     </table>
