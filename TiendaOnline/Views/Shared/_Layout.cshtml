@@ -58,14 +58,14 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         @if (userRole == "Admin")
-                        { }
+                        {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="CategoriaProductos" asp-action="Index">Categorias</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Productos" asp-action="Index">Productos</a>
                             </li>
-                        
+                        }
 
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Home" asp-action="Index">Inicio</a>

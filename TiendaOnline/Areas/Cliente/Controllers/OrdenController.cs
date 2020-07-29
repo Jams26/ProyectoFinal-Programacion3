@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TiendaOnline.Data;
 using TiendaOnline.Models;
@@ -16,11 +17,13 @@ namespace TiendaOnline.Areas.Cliente.Controllers
     {
 
         ApplicationDbContext _db;
+        SignInManager<IdentityUser> _SignInManager;
 
-        public OrdenController(ApplicationDbContext db)
+        public OrdenController(ApplicationDbContext db, SignInManager<IdentityUser> SignInManager)
         {
             _db = db;
-        }
+            _SignInManager = SignInManager;
+    }
 
         //Checkout Action Method
 
@@ -47,6 +50,13 @@ namespace TiendaOnline.Areas.Cliente.Controllers
                 }
             }
 
+            if (_SignInManager.IsSignedIn(User))
+            {
+                unaOrden.Correo = User.Identity.Name;
+            }
+            unaOrden.numeroOrden = obtenerNumeroOrden();
+            unaOrden.Estado = "En proceso";
+
             unaOrden.numeroOrden = obtenerNumeroOrden();
             _db.Orden.Add(unaOrden);
             await _db.SaveChangesAsync();
@@ -55,11 +65,7 @@ namespace TiendaOnline.Areas.Cliente.Controllers
             return View();
         }
 
-        public string obtenerNumeroOrden()
-        {
-            int conteoFila = _db.Orden.ToList().Count()+1;
-            return conteoFila.ToString("000");
-        }
+        
 
 
         public IActionResult Index()
@@ -100,6 +106,10 @@ namespace TiendaOnline.Areas.Cliente.Controllers
             return View(ordenes);
         }
 
-
+        public string obtenerNumeroOrden()
+        {
+            int conteoFila = _db.Orden.ToList().Count() + 1;
+            return conteoFila.ToString("000");
+        }
     }
 }

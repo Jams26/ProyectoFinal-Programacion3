@@ -108,3 +108,5 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Ra
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Index.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ButtonEditOrdenPartial.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Edit.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\OrdenVerificacion\Edit.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\OrdenVerificacion\Index.cshtml.g.cs
