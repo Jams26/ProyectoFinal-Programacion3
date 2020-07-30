@@ -14,11 +14,15 @@
     <div class="col-6 text-right">
         <a asp-action="Create" class="btn btn-info">Agregar Producto</a>
     </div>
+    <br />
+
+    <h3> Rago de precios</h3>
 </div>
 
 <form method="post">
     <div class="row">
         <div class="col-3">
+            <h5>Rango de precio</h5>
             <input type="number" class="form-control" name="bajoPrecio" />
         </div>
         <div class="col-3">
@@ -95,7 +99,26 @@
                 "language": idioma_espanol,
                 dom: 'Bfrtip',
                 buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
+                    {
+                        extend: 'copy',
+                        text: 'COPIAR'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: 'PDF'
+                    },
+                    {
+                        extend: 'excel',
+                        text: 'EXCEL'
+                    },
+                    {
+                        extend: 'csv',
+                        text: 'CSV'
+                    },
+                    {
+                        extend: 'print',
+                        text: 'IMPRIMIR'
+                    }
                 ]
             });
         });

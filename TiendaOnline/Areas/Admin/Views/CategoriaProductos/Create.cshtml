@@ -21,6 +21,34 @@
             </div>
             <span asp-validation-for="nombreCategoria" class="text-danger"></span>
         </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="nombreCategoria"></label>
+            </div>
+
+
+            @*<div class="col-5">
+                <select asp-for="nombreCategoria" class="form-control">
+                    <option>Ropas</option>
+                    <option>Calzados</option>
+                    <option>Tecnología</option>
+                    <option>Deportes</option>
+                    <option>Salud y Belleza</option>
+                    <option>Hogar</option>
+                    <option>Repuestos y accesorios</option>
+                    <option>Videojuegos</option>
+                    <option>Bebés</option>
+                    <option>Equipos y Instrumentos Musicales</option>
+
+                </select>
+            </div>
+            <span asp-validation-for="nombreCategoria" class="text-danger"></span>
+        </div>*@
+
+
+
+
         <div class="form-group">
             <input type="submit" class="btn btn-success" value="Guardar" />
             <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
