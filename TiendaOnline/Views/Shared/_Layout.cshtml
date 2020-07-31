@@ -34,12 +34,13 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <style>
-        .error{
-            color:red;
+        .error {
+            color: red;
         }
     </style>
 
@@ -57,16 +58,34 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
 
-                        @if (userRole == "Admin")
+                        @if (userRole == "Admin" || userRole == "ADMIN")
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="CategoriaProductos" asp-action="Index">Categorias</a>
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="CategoriaProductos" asp-action="Index">Tipos de Productos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Productos" asp-action="Index">Productos</a>
                             </li>
                         }
-
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Categorias
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Ropas">Ropas</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Calzados">Calzados</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Tecnologia">Tecnología</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Deportes">Deportes</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="SaludBelleza">Salud y Belleza</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Hogar">Hogar</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="RepuestosAccesorios">Repuestos/Accesorios</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Videojuegos">Videojuegos</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Bebes">Bebés</a><br />
+                                    <a asp-area="Admin" asp-controller="Categorias" asp-action="Musica">Música</a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
@@ -76,6 +95,10 @@
                                 Carrito
                                 (@contador)
                             </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Orden" asp-action="ConsultarOrdenes">Mis Ordenes</a>
                         </li>
                     </ul>
                 </div>
@@ -89,7 +112,7 @@
         </main>
     </div>
 
-    
+
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -109,7 +132,7 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>

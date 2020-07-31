@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 <br />
-<br />
+
 
 
 <div class="row">
@@ -15,23 +15,20 @@
         <a asp-action="Create" class="btn btn-info">Agregar Producto</a>
     </div>
     <br />
-
-    <h3> Rago de precios</h3>
 </div>
-
+<br />
 <form method="post">
-    <div class="row">
-        <div class="col-3">
-            <h5>Rango de precio</h5>
+    <div class="input-group">
+        <div class="col-2">
             <input type="number" class="form-control" name="bajoPrecio" />
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <input type="number" class="form-control" name="altoPrecio" />
         </div>
-        <div class="col-3">
-            <input type="submit" value="Buscar" class="btn btn-success" />
+        <div class="col-2">
+            <input type="submit" value="Consultar Precio" class="btn btn-success" />
         </div>
-        <div class="col-3"></div>
+        <div class="col-2"></div>
     </div>
 </form>
 <br />

@@ -121,4 +121,16 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Ra
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Cumpleaños\Octubre.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Cumpleaños\Septiembre.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Cumpleaños\Index.cshtml.g.cs
-C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\consultarOrden.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Mapa.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Bebes.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Calzados.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Deportes.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Detail.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Hogar.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Musica.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\RepuestosAccesorios.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Ropas.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\SaludBelleza.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Tecnologia.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Categorias\Videojuegos.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\ConsultarOrdenes.cshtml.g.cs

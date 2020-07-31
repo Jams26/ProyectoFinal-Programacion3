@@ -25,8 +25,22 @@ namespace TiendaOnline.Areas.Cliente.Controllers
         {
             _db = db;
             _SignInManager = SignInManager;
-    }
+        }
 
+
+        [Authorize]
+        public IActionResult ConsultarOrdenes()
+        {
+
+            if (_SignInManager.IsSignedIn(User))
+            {
+
+                string email = User.Identity.Name;
+                return View(_db.Orden.Where(c => c.Correo == email).ToList());
+            }
+            return View();
+
+        }
 
 
         //Checkout Action Method
@@ -40,7 +54,7 @@ namespace TiendaOnline.Areas.Cliente.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Checkout(Orden unaOrden)
+        public async Task<IActionResult> Checkout(Orden ord)
         {
 
             List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
@@ -50,26 +64,29 @@ namespace TiendaOnline.Areas.Cliente.Controllers
                 {
                     OrdenDetalles ordenDetalles = new OrdenDetalles();
                     ordenDetalles.ProductoID = producto.ID;
-                    unaOrden.OrdenDetalles.Add(ordenDetalles);
+                    ord.OrdenDetalles.Add(ordenDetalles);
                 }
             }
 
             if (_SignInManager.IsSignedIn(User))
             {
-                unaOrden.Correo = User.Identity.Name;
+                ord.Correo = User.Identity.Name;
             }
-            unaOrden.numeroOrden = obtenerNumeroOrden();
-            unaOrden.Estado = "En proceso";
-
-            unaOrden.numeroOrden = obtenerNumeroOrden();
-            _db.Orden.Add(unaOrden);
+            ord.numeroOrden = obtenerNumeroOrden();
+            ord.Estado = "En proceso";
+            _db.Orden.Add(ord);
             await _db.SaveChangesAsync();
             HttpContext.Session.Set("productos", new List<Productos>());
 
             return View();
         }
 
-        
+        public string obtenerNumeroOrden()
+        {//Count () + 1
+            int conteoFila = _db.Orden.ToList().Count() + 1;
+            return conteoFila.ToString("000");
+        }
+
 
 
         public IActionResult Index()
@@ -110,10 +127,21 @@ namespace TiendaOnline.Areas.Cliente.Controllers
             return View(ordenes);
         }
 
-        public string obtenerNumeroOrden()
+
+        [HttpGet]
+        public IActionResult Mapa()
         {
-            int conteoFila = _db.Orden.ToList().Count() + 1;
-            return conteoFila.ToString("000");
+            return View(_db.Orden.ToList());
         }
+
+        [HttpPost]
+        public IActionResult Mapa(string estado)
+        {
+            ViewData["Estado"] = estado;
+            return View(_db.Orden.ToList());
+        }
+
+
+        
     }
 }
