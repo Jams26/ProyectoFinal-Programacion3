@@ -83,7 +83,7 @@ namespace TiendaOnline
             {
                 routes.MapRoute(
                   name: "areas",
-                  template: "{area=Cliente}/{controller=Home}/{action=Index}/{id?}"
+                  template: "{area=Cliente}/{controller=Home}/{action=Inicio}/{id?}"
                 );
             });
 

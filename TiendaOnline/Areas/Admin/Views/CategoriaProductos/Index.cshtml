@@ -6,46 +6,48 @@
 <br />
 <br />
 
+<div class="container">
 
-<div class="row">
-    <div class="col-6">
-        <h2 class="text-info">Lista de Categoria de Productos</h2>
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info">Lista de Categoria de Productos</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Create" class="button button-contactForm boxed-btn p-3">Nueva Categoria</a>
+        </div>
     </div>
-    <div class="col-6 text-right">
-        <a asp-action="Create" class="btn btn-info">Nueva Categoria</a>
-    </div>
-</div>
 
-<br />
+    <br />
 
-<div>
-    <table class="table table-striped border">
+    <div>
+        <table class="table table-striped border">
 
-        <tr class="table-info">
-            <th>
-                @Html.DisplayNameFor(c => c.nombreCategoria)
-            </th>
-            <th>
+            <tr class="table-info">
+                <th>
+                    @Html.DisplayNameFor(c => c.nombreCategoria)
+                </th>
+                <th>
 
-            </th>
-            <th class="text-center">
-                Acción
-            </th>
-        </tr>
-
-        @foreach (var k in Model)
-        {
-            <tr>
-                <td>
-                    @k.nombreCategoria
-                </td>
-                <td>
-                    <partial name="_ButtonPartial" model="@k.ID" />
-                </td>
+                </th>
+                <th class="text-center">
+                    Acción
+                </th>
             </tr>
-        }
 
-    </table>
+            @foreach (var k in Model)
+            {
+                <tr>
+                    <td>
+                        @k.nombreCategoria
+                    </td>
+                    <td>
+                        <partial name="_ButtonPartial" model="@k.ID" />
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
 </div>
 
 @section scripts{
@@ -75,5 +77,5 @@
 
         })
     </script>
-    
+
 }

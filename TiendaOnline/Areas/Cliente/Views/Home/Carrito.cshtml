@@ -4,9 +4,9 @@
     ViewData["Title"] = "Carrito";
 }
 
-<h1>Tu Carrito</h1>
-
 <br />
+
+@*<br />
 <div class="row">
     <table class="table table-bordered text-center">
         <thead>
@@ -20,7 +20,8 @@
             </tr>
         </thead>
         <tbody>
-            @foreach(var k in Model){
+            @foreach (var k in Model)
+            {
                 <tr>
                     <td>
                         <img src="~/@k.Imagen" width="200px" height="150px" />
@@ -47,8 +48,76 @@
     </div>
     <div class="col-6 text-right">
         <h3>Precio Total</h3>
-        <h3>Total Facturado : $@Model.Sum(c=>c.Precio)</h3>
+        <h3>Total Facturado : $@Model.Sum(c => c.Precio)</h3>
         <a asp-area="Cliente" asp-action="Checkout" asp-controller="Orden" class="btn btn-info">Verificar</a>
-   </div>
+    </div>
 
-</div>
+</div>*@
+
+<section class="cart_area ">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <h1>Carrito</h1>
+                <br />
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="font-size:18px; color:black;">Producto</th>
+                            <th scope="col" style="font-size:18px; color:black;">Categoria</th>
+                            <th scope="col" style="font-size:18px; color:black;">Precio</th>
+                            <th scope="col" style="font-size:18px; color:black;">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var k in Model)
+                        {
+
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <img src="~/@k.Imagen" />
+                                        </div>
+                                        <div class="media-body">
+                                            <p>@k.Nombre</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>@k.CategoriaProductos.nombreCategoria</h5>
+                                </td>
+                                <td>
+                                    <h5>@k.Precio</h5>
+                                </td>
+                                <td>
+                                    <h5 class="text-center">
+                                        <span class="fas fa-trash-alt button button-contactForm"><a asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.ID"></a></span>
+                                    </h5>
+                                </td>
+                            </tr>
+
+
+                        }
+
+                    </tbody>
+                </table>
+                <br />
+                <div class="text-right">
+                    <h5 class="" style="font-size:20px; color:black;">Total facturado:</h5>
+                    <h5 style="font-size:20px; color:black;">$@Model.Sum(c => c.Precio)</h5>
+                </div>
+                <br />
+                        <div class="">
+                            <a class="btn_3  text-center col-sm-2 col-md-3" asp-action="Index" asp-controller="Home">Seguir comprando</a>
+                            <a class="btn_1 checkout_btn_1 float-right col-sm-2 col-md-3 text-center mt-md-0 mt-sm-3" asp-area="Cliente" asp-action="Checkout" asp-controller="Orden">Proceder a pagar</a>
+                        </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--================End Cart Area =================-->
+
+

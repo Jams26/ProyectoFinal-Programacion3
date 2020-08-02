@@ -2,11 +2,9 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Iniciar sesión";
 }
-
-<h1>@ViewData["Title"]</h1>
-<div class="row">
+@*< class="row">
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
@@ -66,7 +64,7 @@
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                    <button type="submit" class="btn btn-primary text-dark" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
                                 }
                             </p>
                         </div>
@@ -75,7 +73,60 @@
             }
         </section>
     </div>
-</div>
+</div>*@
+<!--================login_part Area =================-->
+
+<section class="login_part mt-4">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>¿Aún no te has registrado?</h2>
+                        <p>
+                            Cree una cuenta gratis para poder disfrutar de nuestros servicios
+                            y poder hacer comprsa en linea.
+                        </p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn_3">Crear una cuenta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h1 class="mb-3 text-center">
+                            Inicie Sesión Aquí
+                        </h1>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <form class="row contact_form" id="account" method="post">
+                            <div class="col-md-12 form-group p_star">
+                                <input asp-for="Input.Email" class="form-control" placeholder="Correo">
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input asp-for="Input.Password"class="form-control"  placeholder="Password">
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account d-flex align-items-center">
+                                    <label asp-for="Input.RememberMe">
+                                        <input asp-for="Input.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                    </label>
+                                </div>
+                                <button type="submit" value="submit" class="btn_3">
+                                    Entrar
+                                </button>
+                                <a class="lost_pass" href="#">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================login_part end =================-->
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

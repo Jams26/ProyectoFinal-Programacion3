@@ -30,6 +30,12 @@ namespace TiendaOnline.Controllers
             return View(_db.Productos.Include(c=>c.CategoriaProductos).ToList().ToPagedList(page??1, 6));
         }
 
+        public IActionResult Inicio(int? page)
+        {
+            return View(_db.Productos.Include(c => c.CategoriaProductos).ToList().ToPagedList(page ?? 1, 6));
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
