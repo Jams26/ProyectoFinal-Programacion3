@@ -141,11 +141,9 @@ namespace TiendaOnline.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -176,17 +174,34 @@ namespace TiendaOnline.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("TiendaOnline.Models.Carrito", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Cantidad");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<string>("email");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Carrito");
                 });
 
             modelBuilder.Entity("TiendaOnline.Models.CategoriaProductos", b =>
@@ -229,8 +244,7 @@ namespace TiendaOnline.Data.Migrations
                     b.Property<string>("Direccion")
                         .IsRequired();
 
-                    b.Property<string>("Estado")
-                        .IsRequired();
+                    b.Property<string>("Estado");
 
                     b.Property<DateTime>("Fecha");
 
@@ -299,6 +313,23 @@ namespace TiendaOnline.Data.Migrations
                     b.ToTable("Productos");
                 });
 
+            modelBuilder.Entity("TiendaOnline.Models.Slider", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<string>("Nombre");
+
+                    b.Property<string>("image");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Slider");
+                });
+
             modelBuilder.Entity("TiendaOnline.Models.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -350,6 +381,14 @@ namespace TiendaOnline.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("TiendaOnline.Models.Carrito", b =>
+                {
+                    b.HasOne("TiendaOnline.Models.Productos", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TiendaOnline.Data;
@@ -25,9 +26,14 @@ namespace TiendaOnline.Controllers
             _db = db;
         }
 
-        public IActionResult Index(int? page)
+        public IActionResult Index(/*int? page*/)
         {
-            return View(_db.Productos.Include(c=>c.CategoriaProductos).ToList().ToPagedList(page??1, 6));
+            ProductosSlider ps = new ProductosSlider();
+            ps.productos = _db.Productos.ToList();
+            ps.sliders = _db.Slider.ToList();
+            return View(ps);
+           // return View(_db.Productos.Include(c=>c.CategoriaProductos).ToList().ToPagedList(page??1, 6));
+
         }
 
         public IActionResult Inicio(int? page)
@@ -48,105 +54,175 @@ namespace TiendaOnline.Controllers
         }
 
 
-        //Detalles de Producto
 
         public ActionResult Detail(int? id)
         {
-
-            if(id == null)
-            {
-                return NotFound();
-            }
-
-            var producto = _db.Productos.Include(c => c.CategoriaProductos).FirstOrDefault(c => c.ID == id);
-
-            if (producto == null)
-            {
-                return NotFound();
-            }
-
-            return View(producto);
-        }
-
-
-        //Post Detalles de Producto
-        [HttpPost]
-        [ActionName("Detail")]
-        public ActionResult ProductoDetail(int? id)
-        {
-
-            List<Productos> productos = new List<Productos>();
-
             if (id == null)
             {
                 return NotFound();
             }
+            var product = _db.Productos.Include(c => c.CategoriaProductos).FirstOrDefault(c => c.ID == id);
+            if (product == null)
+            {
+                return NotFound();
 
-            var producto = _db.Productos.Include(c => c.CategoriaProductos).FirstOrDefault(c => c.ID == id);
+            }
+            return View(product);
+        }
 
-            if (producto == null)
+        [HttpPost]
+        [ActionName("Detail")]
+        public async Task<ActionResult> ProductDetail(int? id)
+        {
+            Carrito cr = new Carrito();
+            List<Productos> producto = _db.Productos.Include(c => c.CategoriaProductos).Where(c => c.ID == id).ToList();
+
+            if (producto != null)
+            {
+                foreach (var prod in producto)
+                {
+                    cr.ProductId = prod.ID;
+                }
+            }
+
+            cr.email = User.Identity.Name;
+
+            cr.Cantidad = 1;
+
+            await _db.Carrito.AddAsync(cr);
+
+            _db.SaveChanges();
+
+            
+            return RedirectToAction(nameof(Index));
+
+
+        }
+
+
+
+        //Detalles de Producto
+
+        //public ActionResult Detail(int? id)
+        //{
+
+        //    if(id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    var producto = _db.Productos.Include(c => c.CategoriaProductos).FirstOrDefault(c => c.ID == id);
+
+        //    if (producto == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(producto);
+        //}
+
+
+        ////Post Detalles de Producto
+        //[HttpPost]
+        //[ActionName("Detail")]
+        //public ActionResult ProductoDetail(int? id)
+        //{
+
+        //    List<Productos> productos = new List<Productos>();
+
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    var producto = _db.Productos.Include(c => c.CategoriaProductos).FirstOrDefault(c => c.ID == id);
+
+        //    if (producto == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+
+        //    productos = HttpContext.Session.Get<List<Productos>>("productos");
+        //    if (productos == null)
+        //    {
+        //        productos = new List<Productos>();
+        //    }
+        //    productos.Add(producto);
+        //    HttpContext.Session.Set("productos", productos);
+        //    return RedirectToAction(nameof(Index));
+        //}
+
+        //Get Remove
+
+
+
+        public async Task<IActionResult> Remove(int? id, Carrito ca)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            if (id != ca.Id)
             {
                 return NotFound();
             }
 
-
-            productos = HttpContext.Session.Get<List<Productos>>("productos");
-            if (productos == null)
+            var car = _db.Carrito.Find(id);
+            if (car == null)
             {
-                productos = new List<Productos>();
+                return NotFound();
             }
-            productos.Add(producto);
-            HttpContext.Session.Set("productos", productos);
-            return RedirectToAction(nameof(Index));
+
+            if (ModelState.IsValid)
+            {
+                _db.Remove(car);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(actionName: nameof(Carrito));
+            }
+            return View(car);
         }
 
-        //Get Remove
-        [ActionName("Remove")]
-        public IActionResult RemoveDelCarrito(int? id)
+        [Authorize]
+        public IActionResult Carrito()
         {
 
-            List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
-            if (productos != null)
-            {
-                var producto = productos.FirstOrDefault(c => c.ID == id);
-                if (producto != null)
-                {
-                    productos.Remove(producto);
-                    HttpContext.Session.Set("productos", productos);
-                }
-            }
-            return RedirectToAction(nameof(Index));
+            var product = _db.Carrito.Include(c => c.Producto).Where(c => c.email == User.Identity.Name).ToList();
+            return View(product);
         }
 
-        [HttpPost]
-        public IActionResult Remove(int? id)
-        {
 
-            List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
-            if (productos != null)
-            {
-                var producto = productos.FirstOrDefault(c => c.ID == id);
-                if (producto != null)
-                {
-                    productos.Remove(producto);
-                    HttpContext.Session.Set("productos", productos);
-                }
-            }
-            return RedirectToAction(nameof(Index));
-        }
+
+        //public IActionResult Remove(int? id)
+        //{
+
+        //    List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
+        //    if (productos != null)
+        //    {
+        //        var producto = productos.FirstOrDefault(c => c.ID == id);
+        //        if (producto != null)
+        //        {
+        //            productos.Remove(producto);
+        //            HttpContext.Session.Set("productos", productos);
+        //        }
+        //    }
+        //    return RedirectToAction(nameof(Index));
+        //}
+
+
 
 
         //Producto Carrito
 
-        public IActionResult Carrito()
-        {
-            List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
-            if (productos == null)
-            {
-                productos = new List<Productos>();
-            }
-            return View(productos);
-        }
+        //public IActionResult Carrito()
+        //{
+        //    List<Productos> productos = HttpContext.Session.Get<List<Productos>>("productos");
+        //    if (productos == null)
+        //    {
+        //        productos = new List<Productos>();
+        //    }
+        //    return View(productos);
+        //}
 
     }
 }

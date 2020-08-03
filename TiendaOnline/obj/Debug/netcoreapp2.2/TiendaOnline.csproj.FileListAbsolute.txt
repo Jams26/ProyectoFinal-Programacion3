@@ -8,7 +8,6 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\bin\Debug\netcoreapp2.2\Ti
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\bin\Debug\netcoreapp2.2\TiendaOnline.pdb
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\bin\Debug\netcoreapp2.2\TiendaOnline.Views.dll
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\bin\Debug\netcoreapp2.2\TiendaOnline.Views.pdb
-C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csprojAssemblyReference.cache
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.RazorAssemblyInfo.cache
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.RazorAssemblyInfo.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.AssemblyInfoInputs.cache
@@ -57,7 +56,6 @@ C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Ra
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Detail.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Carrito.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Orden\Checkout.cshtml.g.cs
-C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csproj.CoreCompileInputs.cache
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
 C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
@@ -269,3 +267,11 @@ C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\P
 C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.pdb
 C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csproj.CopyComplete
 C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Inicio.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Inicio.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csprojAssemblyReference.cache
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csproj.CoreCompileInputs.cache
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Index.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Delete.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\GestorClientes\Index.cshtml.g.cs
+C:\Users\javie\source\repos\TiendaOnline\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\GestorClientes\VisualizarCompras.cshtml.g.cs
