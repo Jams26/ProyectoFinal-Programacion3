@@ -80,29 +80,29 @@
                                             <img src="~/@k.Producto.Imagen" />
                                         </div>
                                         @*<div class="media-body">
-                                            <p>@k.Producto.Nombre</p>
-                                        </div>*@
+                                    <p>@k.Producto.Nombre</p>
+                                </div>*@
                                     </div>
                                 </td>
                                 <td>
                                     @k.Producto.Nombre
                                 </td>
                                 @*<td>
-                                    <h5>@k.CategoriaProductos.nombreCategoria</h5>
-                                </td>*@
+                            <h5>@k.CategoriaProductos.nombreCategoria</h5>
+                        </td>*@
                                 <td>
                                     <h5>@k.Producto.Precio</h5>
                                 </td>
                                 <td>
-                                    <a class="active" asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.Id">
+                                    <a class="btn_3 p-2" asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.Id">
                                         Eliminar
                                     </a>
                                 </td>
                                 @*<td>
-                                    <h5 class="text-center">
-                                        <span class="fas fa-trash-alt button button-contactForm"><a asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.Id"></a></span>
-                                    </h5>
-                                </td>*@
+                            <h5 class="text-center">
+                                <span class="fas fa-trash-alt button button-contactForm"><a asp-area="Cliente" asp-action="Remove" asp-controller="Home" asp-route-id="@k.Id"></a></span>
+                            </h5>
+                        </td>*@
                             </tr>
 
 
@@ -116,10 +116,26 @@
                     <h5 style="font-size:20px; color:black;">$@Model.Sum(c => c.Producto.Precio)</h5>
                 </div>
                 <br />
-                        <div class="">
-                            <a class="btn_3  text-center col-sm-2 col-md-3" asp-action="Index" asp-controller="Home">Seguir comprando</a>
-                            <a class="btn_1 checkout_btn_1 float-right col-sm-2 col-md-3 text-center mt-md-0 mt-sm-3" asp-area="Cliente" asp-action="Checkout" asp-controller="Orden">Proceder a pagar</a>
-                        </div>
+                <div class="">
+                    <a class="btn_3  text-center col-sm-2 col-md-3" asp-action="Index" asp-controller="Home">Seguir comprando</a>
+
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="verlyn2800@gmail.com">
+                        <input type="hidden" name="item_name" value="Premium Subscription">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="amount" value="@Model.Sum(c => c.Producto.Precio)">
+
+                        <input type="submit" value="Realizar Pago" class="btn_1 checkout_btn_1 float-right col-sm-2 col-md-3 text-center mt-md-0 mt-sm-3"
+                               src="http://www.paypal.com/es_XC/i/btn/x-click-but01.gif"
+                               name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+
+                        <input type="hidden" name="return" value="https://localhost:44387/Cliente/Orden/Checkout/pagado.php">
+                        <input type="hidden" name="cancel_return" value="https://localhost:44387/Cliente/Home/Carrito/cancelado.php">
+
+                    </form>
+
+                </div>
 
             </div>
         </div>

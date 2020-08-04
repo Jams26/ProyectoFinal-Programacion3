@@ -35,6 +35,32 @@ namespace TiendaOnline.Controllers
            // return View(_db.Productos.Include(c=>c.CategoriaProductos).ToList().ToPagedList(page??1, 6));
 
         }
+        public async Task<IActionResult> Resultados(string busqueda)
+        {
+
+            ViewData["FILTRO"] = busqueda;
+            var productos = from s in _db.Productos select s;
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                productos = productos.Where(s => s.Nombre.Contains(busqueda));
+
+                if (productos.Count() == 0)
+                {
+                    return RedirectToAction(nameof(notresultado));
+                }
+            }
+            
+            return View(productos.ToList());
+
+        }
+        public IActionResult notresultado()
+        {
+            @ViewData["NORESULTADO"] = "NO SE ENCONTRARON RESULTADOS";
+            return View();
+        }
+
+
+
 
         public IActionResult Inicio(int? page)
         {

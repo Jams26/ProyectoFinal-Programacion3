@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\javie\\source\\repos\\TiendaOnline\\TiendaOnline\\TiendaOnline.csproj": {}
+    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\javie\\source\\repos\\TiendaOnline\\TiendaOnline\\TiendaOnline.csproj": {
+    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\javie\\source\\repos\\TiendaOnline\\TiendaOnline\\TiendaOnline.csproj",
+        "projectUniqueName": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
         "projectName": "TiendaOnline",
-        "projectPath": "C:\\Users\\javie\\source\\repos\\TiendaOnline\\TiendaOnline\\TiendaOnline.csproj",
-        "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\javie\\source\\repos\\TiendaOnline\\TiendaOnline\\obj\\",
+        "projectPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "packagesPath": "C:\\Users\\verly\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\verly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -85,7 +87,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -158,17 +158,22 @@
                                         <li><a asp-area="Admin" asp-controller="Categorias" asp-action="Musica">Música</a></li>
 
                                     </ul>
+                                </li>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <form asp-action="Resultados" method="post" style="display:inline-block;">
+                                    <li>
+                                        <div class="nav-search search-switch">
 
-                                <li>
-                                    <div class="nav-search search-switch">
-                                        <input type="text" class="single-input col-12" name="name" value="" placeholder="Buscar" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="flaticon-search"></span>
-                                    </a>
-                                </li>
+                                            <input type="text" class="single-input col-12" name="busqueda" value="@ViewData["FILTRO"]" placeholder="Buscar" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="submit-span" href="#">
+                                            <span class="flaticon-search"></span>
+
+                                        </a>
+                                    </li>
+                                </form>
 
                                 <li> <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Orden" asp-action="ConsultarOrdenes">Mis Ordenes</a></li>
 
@@ -252,12 +257,12 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" defer></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js "defer></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js " defer></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js "defer></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js " defer></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js " defer></script>
     <!--Time Zone - Js-->
     <!-- JS here -->
@@ -296,5 +301,17 @@
     <!--Fin Time Zone - Js-->
 
     @RenderSection("Scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            var spanSubmit = $('.submit-span');
+
+            spanSubmit.on('click', function () {
+                $(this).closest('form').submit();
+                // Will also work, but might fail if nesting is changed:
+                // $(this).parent().submit();
+            });
+        });
+    </script>
 </body>
 </html>
