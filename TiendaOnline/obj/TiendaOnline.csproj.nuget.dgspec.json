@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
   },
   "projects": {
@@ -19,6 +20,27 @@
         "configFilePaths": [
           "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+    "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "projectName": "TiendaOnline",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+>>>>>>> e488a4d1acb9643806f762739c9cc68355b2ef57
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

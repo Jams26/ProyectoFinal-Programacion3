@@ -55,7 +55,7 @@ namespace TiendaOnline.Controllers
         }
         public IActionResult notresultado()
         {
-            @ViewData["NORESULTADO"] = "NO SE ENCONTRARON RESULTADOS";
+            @ViewData["NORESULTADO"] = "NO SE ENCONTRARON RESULTADOS DE SU BUSQUEDA";
             return View();
         }
 
