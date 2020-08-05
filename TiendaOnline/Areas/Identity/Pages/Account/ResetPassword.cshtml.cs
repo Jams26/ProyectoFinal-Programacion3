@@ -25,20 +25,23 @@ namespace TiendaOnline.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Debe ingresar un correo")]
             [EmailAddress]
+            [Display(Name = "Correo")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Contraseña")]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
+            [Display(Name = "Contraseña")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Confirmar contraseña")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
+            [Display(Name = "Codigo")]
             public string Code { get; set; }
         }
 

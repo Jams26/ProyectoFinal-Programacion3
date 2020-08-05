@@ -31,6 +31,7 @@ namespace TiendaOnline.Areas.Identity.Pages.Account.Manage
         {
             [Required]
             [DataType(DataType.Password)]
+            [Display(Name = "Contraseña")]
             public string Password { get; set; }
         }
 

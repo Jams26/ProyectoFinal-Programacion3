@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Cart";
 }
+    <br />
     <div class="container">
         <h1>Compras del Cliente</h1>
 
@@ -42,7 +43,7 @@
             <div class="col-6 text-right">
                 <h3>Cantidad Total</h3>
                 <h3>Total Cuenta: @Model.Sum(c => c.Producto.Precio)</h3>
-                <a asp-area="Admin" asp-action="Index" asp-controller="GestorClientes" class="btn btn-info">Volver a Lista de Clientes</a>
+                <a asp-area="Admin" asp-action="Index" asp-controller="GestorClientes" class="btn_3">Volver a Lista de Clientes</a>
 
 
             </div>

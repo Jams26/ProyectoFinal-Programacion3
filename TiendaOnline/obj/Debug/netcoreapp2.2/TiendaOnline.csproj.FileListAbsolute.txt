@@ -419,3 +419,10 @@ C:\Users\verly\OneDrive\Desktop\ProyectoFinal-Programacion3\TiendaOnline\obj\Deb
 C:\Users\verly\OneDrive\Desktop\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.genruntimeconfig.cache
 C:\Users\verly\OneDrive\Desktop\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\TiendaOnline.csproj.CopyComplete
 C:\Users\verly\OneDrive\Desktop\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\notresultado.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\GestorClientes\Index.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\GestorClientes\VisualizarCompras.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Delete.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Slider\Index.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\notresultado.cshtml.g.cs
+C:\Users\Jesus\Documents\Cuatrimestre\5to cuatrimestre\Programacion 3 - Amadis\Proyecto final\ProyectoFinal-Programacion3\TiendaOnline\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Resultados.cshtml.g.cs

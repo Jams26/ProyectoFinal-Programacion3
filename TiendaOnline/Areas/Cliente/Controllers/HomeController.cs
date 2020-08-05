@@ -64,13 +64,12 @@ namespace TiendaOnline.Controllers
 
         public IActionResult Inicio(int? page)
         {
-            return View(_db.Productos.Include(c => c.CategoriaProductos).ToList().ToPagedList(page ?? 1, 6));
-        }
 
-
-        public IActionResult Privacy()
-        {
-            return View();
+            ProductosSlider ps = new ProductosSlider();
+            ps.productos = _db.Productos.ToList();
+            ps.sliders = _db.Slider.ToList();
+            return View(ps);
+            //return View(_db.Productos.Include(c => c.CategoriaProductos).ToList().ToPagedList(page ?? 1, 6));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

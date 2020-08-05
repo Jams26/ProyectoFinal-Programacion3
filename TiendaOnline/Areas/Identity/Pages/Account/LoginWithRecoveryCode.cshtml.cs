@@ -31,9 +31,9 @@ namespace TiendaOnline.Areas.Identity.Pages.Account
         public class InputModel
         {
             [BindProperty]
-            [Required]
+            [Required  (ErrorMessage = "Tiene que igresar un codigo de recuperacion")]
             [DataType(DataType.Text)]
-            [Display(Name = "Recovery Code")]
+            [Display(Name = "Codigo de recuperacion")]
             public string RecoveryCode { get; set; }
         }
 

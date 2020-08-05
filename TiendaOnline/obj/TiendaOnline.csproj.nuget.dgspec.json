@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
+    "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
+    "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "projectUniqueName": "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
         "projectName": "TiendaOnline",
-        "projectPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
-        "packagesPath": "C:\\Users\\verly\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
+        "projectPath": "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "packagesPath": "C:\\Users\\Jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jesus\\Documents\\Cuatrimestre\\5to cuatrimestre\\Programacion 3 - Amadis\\Proyecto final\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\verly\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -87,7 +85,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

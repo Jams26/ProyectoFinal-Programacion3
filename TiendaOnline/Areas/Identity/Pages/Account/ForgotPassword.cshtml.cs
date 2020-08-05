@@ -28,8 +28,9 @@ namespace TiendaOnline.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Tiene que ingresar un correo")]
             [EmailAddress]
+            [Display(Name = "Correo")]
             public string Email { get; set; }
         }
 

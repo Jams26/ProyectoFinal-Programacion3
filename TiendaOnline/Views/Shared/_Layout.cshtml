@@ -67,65 +67,7 @@
 
 </head>
 <body>
-    @*<header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="Cliente" asp-controller="Home" asp-action="Index">Tienda "Breaking The Scheme"</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <partial name="_LoginPartial" />
-                        <ul class="navbar-nav flex-grow-1">
 
-                            @if (userRole == "Admin" || userRole == "ADMIN")
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="CategoriaProductos" asp-action="Index">Tipos de Productos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Productos" asp-action="Index">Productos</a>
-                                </li>
-                            }
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">
-                                        Categorias
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Ropas">Ropas</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Calzados">Calzados</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Tecnologia">Tecnología</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Deportes">Deportes</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="SaludBelleza">Salud y Belleza</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Hogar">Hogar</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="RepuestosAccesorios">Repuestos/Accesorios</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Videojuegos">Videojuegos</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Bebes">Bebés</a><br />
-                                        <a asp-area="Admin" asp-controller="Categorias" asp-action="Musica">Música</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Home" asp-action="Index">Inicio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Home" asp-action="Carrito">
-                                    Carrito
-                                    (@contador)
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Cliente" asp-controller="Orden" asp-action="ConsultarOrdenes">Mis Ordenes</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>*@
 
     <!--Time Zone - Header-->
     <div class="header-area">
@@ -191,6 +133,7 @@
                                             <li><a asp-area="Admin" asp-controller="Cumpleaños" asp-action="Index">Cumpleaños</a></li>
                                             <li><a asp-area="Admin" asp-controller="Slider" asp-action="Index">Slider</a></li>
                                             <li><a asp-area="Admin" asp-controller="GestorClientes" asp-action="Index">Gestor de Clientes</a></li>
+                                            <li><a asp-area="Cliente" asp-controller="User" asp-action="Index">Gestor de usuarios</a></li>
                                         </ul>
                                     </li>
                                 }

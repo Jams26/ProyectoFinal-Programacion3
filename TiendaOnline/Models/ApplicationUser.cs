@@ -10,7 +10,7 @@ namespace TiendaOnline.Models
     public class ApplicationUser : IdentityUser
     {
         [Display(Name = "Fecha de Nacimiento")]
-        [Required]
+        [Required (ErrorMessage = "Debe ingresar una fecha de nacimiento")]
         public DateTime fechaNacimiento { get; set; }
     }
 }

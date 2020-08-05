@@ -3,56 +3,6 @@
     ViewData["Title"] = "Agregar Producto";
 }
 
-@*<br />
-
-<h2 class="text-info"> Agregar nuevo usuario</h2>
-
-<form asp-action="Create" method="post" id="user-fxorm" enctype="multipart/form-data">
-    <div class="p-4 rounded border">
-        <div asp-validation-summary="ModelOnly" class="text-danger">
-
-        </div>
-        <h3>@ViewBag.message</h3>
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="UserName">Correo Electrónico</label>
-            </div>
-            <div class="col-5">
-                <input asp-for="UserName" class="form-control" />
-            </div>
-            <span asp-validation-for="UserName" class="text-danger"></span>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="PasswordHash">Contraseña</label>
-            </div>
-            <div class="col-5">
-                <input asp-for="PasswordHash" class="form-control" type="password" />
-            </div>
-            <span asp-validation-for="PasswordHash" class="text-danger"></span>
-        </div>
-
-
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="fechaNacimiento"></label>
-            </div>
-            <div class="col-5">
-                <input asp-for="fechaNacimiento" class="form-control" />
-            </div>
-            <span asp-validation-for="fechaNacimiento" class="text-danger"></span>
-        </div>
-
-
-        <div class="form-group">
-            <input type="submit" class="btn btn-success" value="Guardar" />
-            <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
-        </div>
-    </div>
-</form>*@
-
-
 <!--================login_part Area =================-->
 <section class="login_part">
     <div class="container">
@@ -69,7 +19,7 @@
                             <h3>@ViewBag.message</h3>
                             <div class="col-md-12 form-group p_star">
                                 <label asp-for="UserName">Correo electrónico</label>
-                                <input asp-for="UserName" class="form-control"
+                                <input asp-for="UserName"  class="form-control"
                                        placeholder="Correo electrónico">
                                 <span asp-validation-for="UserName" class="text-danger"></span>
 

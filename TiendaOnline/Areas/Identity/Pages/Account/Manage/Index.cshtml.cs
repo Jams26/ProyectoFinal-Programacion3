@@ -27,6 +27,7 @@ namespace TiendaOnline.Areas.Identity.Pages.Account.Manage
             _emailSender = emailSender;
         }
 
+        [Display(Name = "Nombre de usuario")]
         public string Username { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
@@ -39,12 +40,13 @@ namespace TiendaOnline.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
+            [Required (ErrorMessage = "Tiene que ingresar un coreo")]
             [EmailAddress]
+            [Display(Name = "Correo")]
             public string Email { get; set; }
 
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Número de teléfono")]
             public string PhoneNumber { get; set; }
         }
 
