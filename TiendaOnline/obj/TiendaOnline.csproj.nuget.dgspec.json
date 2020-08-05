@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
         "projectName": "TiendaOnline",
-        "projectPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
-        "packagesPath": "C:\\Users\\verly\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\verly\\OneDrive\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\TiendaOnline.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\ProyectoFinal-Programacion3\\TiendaOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\verly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

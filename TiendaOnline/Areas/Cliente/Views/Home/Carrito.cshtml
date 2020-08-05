@@ -112,12 +112,12 @@
                 </table>
                 <br />
                 <div class="text-right">
-                    <h5 class="" style="font-size:20px; color:black;">Total facturado:</h5>
+                    <h5 class="" style="font-size:20px; color:black;">Monto Total: </h5>
                     <h5 style="font-size:20px; color:black;">$@Model.Sum(c => c.Producto.Precio)</h5>
                 </div>
                 <br />
                 <div class="">
-                    <a class="btn_3  text-center col-sm-2 col-md-3" asp-action="Index" asp-controller="Home">Seguir comprando</a>
+                    <a class="btn_3  text-center col-sm-2 col-md-3" asp-action="Index" asp-controller="Home">Seguir con la compra</a>
 
                     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_xclick">
@@ -126,7 +126,7 @@
                         <input type="hidden" name="currency_code" value="USD">
                         <input type="hidden" name="amount" value="@Model.Sum(c => c.Producto.Precio)">
 
-                        <input type="submit" value="Realizar Pago" class="btn_1 checkout_btn_1 float-right col-sm-2 col-md-3 text-center mt-md-0 mt-sm-3"
+                        <input type="submit" value="Hacer Pago" class="btn_1 checkout_btn_1 float-right col-sm-2 col-md-3 text-center mt-md-0 mt-sm-3"
                                src="http://www.paypal.com/es_XC/i/btn/x-click-but01.gif"
                                name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 
